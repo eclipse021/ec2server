@@ -1,0 +1,40 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+
+spring:
+  application:
+    name: Demo
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: elucidator
+    url: jdbc:mysql://insuleng.c5qeagu0er4r.ap-northeast-2.rds.amazonaws.com:3306/insuleng?useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&serverTimezone=Asia/Seoul
+    password: ntpcbackendstudy
+
+  jpa:
+    properties:
+      hibernate:
+        format_sql: 'true'
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: update
+
+  jwt:
+    secret: wopkoendslnflsjnkwlSsklndSADKOSNkdlsdfpdlkdmslkclsdnllp
+    issuer: yahang2008@gmail.com
+
+  mail:
+    host: smtp.gmail.com # 1 SMTP 서버 호스트
+    port: 587 # 2 SMTP 서버 포트
+    username: insuleng # 3 SMTP 서버 로그인 아이디
+    password: aekv rfva lxyq urvp # 4 앱 비밀번호
+    properties:
+      mail:
+        smtp:
+          auth: true # 5 사용자 인증 시도 여부 (default는 false)
+          timeout: 5000 # 6 Socket Read Timeout시간 (default는 무한대)
+          starttls:
+            enable: true # 7 startTLS 활성화 여부(기본값 false)
